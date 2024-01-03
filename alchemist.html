@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Power - Book Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f0e6; /* Beige background */
+            color: #3e2723; /* Vintage text color */
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1200px; /* Adjust as needed */
+            margin: auto;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%; /* Use 50% of the container width */
+            max-width: 50%; /* Use 50% of the container width */
+            padding: 15px; /* Space inside the columns */
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px; /* Optional: adds rounded corners to the image */
+        }
+
+        h1 {
+            font-weight: 700; /* Playfair Display bold for headings */
+        }
+
+        p {
+            font-weight: 400; /* Playfair Display regular for paragraphs */
+            line-height: 1.6; /* Adjust line spacing for readability */
+        }
+
+        .btn {
+            background-color: #3e2723; /* Button color */
+            color: white; /* Text color */
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px; /* Space above the button */
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #594947; /* Darker shade for hover effect */
+        }
+
+        @media (max-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/alchemist.jpeg" alt="The Power" style="max-width:100%;">
+            </div>
+            <div class="col-md-6">
+                <h1>The Alchemist</h1>
+                <p><strong>Originally published:</strong> 1988</p>
+                <p><strong>Author:</strong>  Paulo Coelho</p>
+                <p><strong>Genres:</strong> Novel, Drama, Fantasy Fiction, Adventure fiction, Quest</p>
+                <p>The Alchemist is a novel by Brazilian author Paulo Coelho which was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller.</p>
+                <a href="https://drive.google.com/file/d/1NYDgpsYOxziKAlEpCNMrKQOPZRmZld0w/view?usp=sharing" class="btn">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

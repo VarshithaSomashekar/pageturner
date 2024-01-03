@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Page Turner</title>
+    <style>
+        body {
+            background-color: #D3B88C;
+        }
+        .empty-cart {
+            text-align: center;
+            margin-top: 50px;    
+        }
+        img {
+            max-width: 70%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cartItems">
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+
+    <div id="emptyCart" class="empty-cart">
+        <!-- This will be displayed when the cart is empty -->
+        <img src="images/cart.png" alt="Empty Cart">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <script>
+        // Basic structure for cart functionality
+        // This should be replaced with actual server-side logic in a real application
+        document.addEventListener('DOMContentLoaded', function() {
+            let cart = []; // This would typically be loaded from a database or server session
+
+            // Example of adding an item to the cart
+            // In a real app, this would be triggered by clicking an "Add to Cart" button
+            function addToCart(item) {
+                cart.push(item);
+                updateCartDisplay();
+            }
+
+            // Update the cart display
+            function updateCartDisplay() {
+                const cartItemsDiv = document.getElementById('cartItems');
+                const emptyCartDiv = document.getElementById('emptyCart');
+
+                // Clear current cart items
+                cartItemsDiv.innerHTML = '';
+
+                // Hide the empty cart message by default
+                emptyCartDiv.style.display = 'none';
+
+                // Check if the cart is empty
+                if (cart.length === 0) {
+                    emptyCartDiv.style.display = 'block';
+                } else {
+                    // If the cart is not empty, display each item
+                    cart.forEach(item => {
+                        const itemDiv = document.createElement('div');
+                        itemDiv.textContent = `Book: ${item.title} - Price: ${item.price}`;
+                        cartItemsDiv.appendChild(itemDiv);
+                    });
+                }
+            }
+
+            // Initial update
+            updateCartDisplay();
+        });
+    </script>
+</body>
+</html>

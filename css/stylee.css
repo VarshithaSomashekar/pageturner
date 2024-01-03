@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Using 'Playfair Display' for the font to match the logo's vintage style */
+  font-family: 'Playfair Display', serif;
+}
+
+.carousel-inner img {
+  /* Ensuring the carousel images fill their container */
+  width: 100%;
+  height: 90vh;
+}
+
+.carousel-caption h3 {
+  color: #000000; /* Black color for carousel caption heading */
+}
+
+.aboutimg {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+}
+
+.one {
+  /* Using a dark color for contrast with the brown background */
+  color: #3E2723;
+  /* Maintaining 'Playfair Display' for consistency */
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  /* Setting the text color to white for contrast */
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Adjusting the text color for readability */
+  color: #3E2723;
+}
+
+/* Setting the background color to match the brown color of the logo */
+body {
+  background-color: #D3B88C;
+}
+.book-cover {
+    height: 250px; /* Fixed height for all images */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* This will cover the area without distorting aspect ratio */
+  }
+  
+  /* Make sure the anchors don't have any default styling */
+.col-lg-3 a, .col-md-4 a, .col-6 a {
+    text-decoration: none;
+    color: inherit; /* This ensures the color of h5 is not changed */
+  }
+
+  /* You may want to add some padding to the text under the images */
+.col-lg-3 h5, .col-md-4 h5, .col-6 h5 {
+    padding-top: 10px; /* Space between image and text */
+  }
+
+  /* Responsive adjustments may be required for different screen sizes */
+@media (max-width: 768px) {
+    .book-cover {
+      height: 200px;
+    }
+  }
+
+@media (max-width: 576px) {
+    .book-cover {
+      height: 150px;
+    }
+  }
+

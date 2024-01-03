@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Page Turner</title>
+    <style>
+        /* Add your CSS styles for the login form here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e6; /* Beige background */
+        }
+        .form-container {
+            max-width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the logo and text */
+        }
+        .form-container img {
+            max-width: 100px; /* Adjust size as needed */
+            margin-top: 20px;
+        }
+        .form-container h1 {
+            margin: 10px 0;
+            color: #3e2723;
+        }
+        /* Apply the same styles for both email and password inputs */
+        input[type="email"], input[type="password"] {
+            width: 100%; /* Full width */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%; /* Full width */
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #3e2723; /* Dark brown */
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #594947; /* Lighter brown */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="form-container">
+        <img src="images/logo.png" alt="Page Turner Logo">
+        <h1>Page Turner</h1>
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" required> <!-- Changed to type="email" -->
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+    <script>
+        // Get the form element
+        var loginForm = document.getElementById('loginForm');
+    
+        // Attach an event listener for the 'submit' event
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submit action
+    
+            // Normally you would validate the input or send a request to the server here
+            // Since we're using type="email", the browser will validate the email format for us
+            // For this example, we'll just redirect to index.html if the email is valid
+            window.location.href = 'index.html';
+        });
+    </script>
+    
+    </body>
+    </html>
+    

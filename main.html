@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Your Bookstore | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+            background-color: #D3B88C; /* Same background color as the about page */
+        }
+
+        .container, .container-fluid {
+            text-align: center;
+            color: #3E2723; /* Dark color for text */
+        }
+
+        .light-section {
+            background-color: #fff; /* Light background for contrast */
+            color: #3E2723;
+            padding: 20px 0;
+        }
+
+        .dark-section {
+            background-color: #3E2723; /* Dark background for footer */
+            color: white;
+            padding: 10px 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .text-footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header {
+            background-color: #D3B88C; /* Same background color as the about page */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Style for the logo image */
+        .logo {
+            height: 400px;
+            width: 500px; /* You can adjust the size as needed */
+        }      
+
+        /* Add other styles here as needed */
+    </style>
+<head>
+<title>Online Bookstore</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/stylee.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- <script src="script.js"></script> -->
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Page Turner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <form id="searchForm" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search for a book" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            
+            <!-- JavaScript to handle the search logic -->
+            <script>
+            document.getElementById('searchForm').onsubmit = function(event) {
+                event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+                var searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
+                var bookPages = {
+                    'power': 'power.html',
+                    'alchemist': 'alchemist.html',
+                    'crooked kingdom':'crookedkingdom.html',
+                    'da vinci code': 'davincicode.html',
+                    'six of crows': 'sixofcrow.html',
+                    'murder on the orient express': 'murder.html',
+                    'pride and prejudice': 'pride.html',
+                    'men are from mars, women are from venus':'menwomen.html'
+                };
+            
+                if (bookPages[searchQuery]) {
+                    // If the book exists, redirect to its page
+                    window.location.href = bookPages[searchQuery];
+                } else {
+                    // If the book does not exist, redirect to the error page
+                    window.location.href = 'error.html';
+                }
+            };
+            </script>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+<header class="header">
+    <img src="images/logo.png" alt="Bookstore Logo" class="logo" width="1500" height="700">
+</header>
+
+  
+<section class="my-5">
+  <div class="py-5">
+    <h2 class="text-center">Featured Books</h2>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Book items -->
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="power.html" class="text-decoration-none"> <!-- Link to the book's detail page -->
+          <img src="images/power_resized.jpg" class="img-fluid book-cover pb-3" alt="THE POWER" style="cursor:pointer;">
+          <h5 class="mt-2">THE POWER</h5>
+        </a>
+      </div>
+      
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="alchemist.html" class="text-decoration-none">
+            <img src="images/alchemist.jpeg" class="img-fluid book-cover pb-3"  alt="THE POWER" style="cursor:pointer;">
+            <h5 class="mt-2">THE ALCHEMIST</h5>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="murder.html" class="text-decoration-none">
+            <img src="images/murderAC.jpeg" class="img-fluid book-cover pb-3"  alt="THE POWER" style="cursor:pointer;">
+            <h5 class="mt-2">MURDER ON THE ORIENT EXPRESS</h5>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="sixofcrow.html" class="text-decoration-none">
+            <img src="images/sixofcrows_resized.jpg" class="img-fluid book-cover pb-3"  alt="THE POWER" style="cursor:pointer;">
+            <h5 class="mt-2">SIX OF CROWS</h5>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="crookedkingdom.html" class="text-decoration-none">
+            <img src="images/crookedkingdom_resized.jpg" class="img-fluid book-cover pb-3"  alt="THE POWER" style="cursor:pointer;">
+            <h5 class="mt-2">CROOKED KINGDOM</h5>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="davincicode.html" class="text-decoration-none">
+            <img src="images/davincicode_resized.jpg" class="img-fluid book-cover pb-3"  alt="THE POWER" style="cursor:pointer;">
+            <h5 class="mt-2">THE DA VINCI CODE</h5>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="pride.html" class="text-decoration-none">
+            <img src="images/pride_prejudice_resized.jpg" class="img-fluid book-cover pb-3"  alt="THE POWER" style="cursor:pointer;">
+            <h5 class="mt-2">PRIDE AND PREJUDICE</h5>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="menwomen.html" class="text-decoration-none">
+            <img src="images/men_from_mars_resized.jpg" class="img-fluid book-cover pb-3"  alt="THE POWER" style="cursor:pointer;">
+            <h5 class="mt-2">MEN ARE FROM MARS, WOMEN ARE FROM VENUS</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light-section" id="contact">
+    <div class="container-fluid">
+        <h1>📞 Contact Us</h1>
+        <div id="service">
+            <div class="box">
+                
+                <br>
+                <p class="center">
+                    Use this Email to send us about the problem faced
+                </p>
+                <p>pageturner@gmail.com</p>
+            </div>
+            <div class="box">
+                
+                <br>
+                <p class="center">
+                    Toll Free Number
+                </p>
+                <p>+1800 200 300 400</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="dark-section">
+    <p class="text-footer">
+        Created by <b>Varshitha S</b> &copy; All rights are reserved
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
